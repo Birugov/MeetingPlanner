@@ -15,7 +15,6 @@ namespace WindowsFormsApp1
         public Form3(Form1 form1)
         {
             InitializeComponent();
-            this.BackColor = Color.LightPink;
         }
 
         private void UserCalendar(object sender, DateRangeEventArgs e)
@@ -26,6 +25,11 @@ namespace WindowsFormsApp1
         private void SendDataBtn(object sender, EventArgs e)
         {
             MessageBox.Show("Данные скопированы в буффер обмена");
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

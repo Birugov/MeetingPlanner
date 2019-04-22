@@ -14,18 +14,17 @@ namespace WindowsFormsApp1
     {
         private Form2 form2;
         private Form3 form3;
+
         public Form1()
         {
             
             InitializeComponent();
             form2 = new Form2(this) { Visible = false }; 
             form3= new Form3(this) { Visible = false };
-            this.BackColor = Color.DeepPink;
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
             
         }
 
