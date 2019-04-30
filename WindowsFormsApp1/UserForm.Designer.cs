@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form3
+    partial class UserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,13 +32,6 @@
             this.readyButton = new System.Windows.Forms.Button();
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(202, 119);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 0;
-            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.UserCalendar);
             // 
             // readyButton
             // 

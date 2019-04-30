@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class UserForm : Form
     {
-        public Form2(Form1 form1)
+        public UserForm()
         {
             InitializeComponent();
         }
 
-        private void CalculateBtn(object sender, EventArgs e)
+        private void SendDataBtn(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Данные скопированы в буффер обмена");
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
 
         }
