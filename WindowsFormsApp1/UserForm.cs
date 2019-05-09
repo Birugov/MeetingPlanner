@@ -20,9 +20,15 @@ namespace WindowsFormsApp1
         private void SendDataBtn(object sender, EventArgs e)
         {
             MessageBox.Show("Данные скопированы в буффер обмена");
+            this.Close();
         }
 
         private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
