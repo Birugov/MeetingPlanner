@@ -30,8 +30,8 @@
         {
             this.readyButton = new System.Windows.Forms.Button();
             this.userNameTextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.fromMinutesTimePicker = new System.Windows.Forms.TextBox();
+            this.fromHoursTimePicker = new System.Windows.Forms.TextBox();
             this.AddButton = new System.Windows.Forms.Button();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,8 +40,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.toHoursTimePicker = new System.Windows.Forms.TextBox();
+            this.toMinutesTimePicker = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -62,19 +62,19 @@
             this.userNameTextBox.Size = new System.Drawing.Size(194, 20);
             this.userNameTextBox.TabIndex = 3;
             // 
-            // textBox1
+            // fromMinutesTimePicker
             // 
-            this.textBox1.Location = new System.Drawing.Point(158, 198);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(58, 20);
-            this.textBox1.TabIndex = 5;
+            this.fromMinutesTimePicker.Location = new System.Drawing.Point(158, 198);
+            this.fromMinutesTimePicker.Name = "fromMinutesTimePicker";
+            this.fromMinutesTimePicker.Size = new System.Drawing.Size(58, 20);
+            this.fromMinutesTimePicker.TabIndex = 5;
             // 
-            // textBox2
+            // fromHoursTimePicker
             // 
-            this.textBox2.Location = new System.Drawing.Point(66, 198);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(58, 20);
-            this.textBox2.TabIndex = 6;
+            this.fromHoursTimePicker.Location = new System.Drawing.Point(66, 198);
+            this.fromHoursTimePicker.Name = "fromHoursTimePicker";
+            this.fromHoursTimePicker.Size = new System.Drawing.Size(58, 20);
+            this.fromHoursTimePicker.TabIndex = 6;
             // 
             // AddButton
             // 
@@ -84,6 +84,7 @@
             this.AddButton.TabIndex = 9;
             this.AddButton.Text = "Добавить";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // dateTimePicker
             // 
@@ -131,7 +132,6 @@
             this.label5.Size = new System.Drawing.Size(102, 16);
             this.label5.TabIndex = 16;
             this.label5.Text = "Введите имя";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -153,19 +153,19 @@
             this.label3.TabIndex = 20;
             this.label3.Text = ":";
             // 
-            // textBox3
+            // toHoursTimePicker
             // 
-            this.textBox3.Location = new System.Drawing.Point(66, 253);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(58, 20);
-            this.textBox3.TabIndex = 19;
+            this.toHoursTimePicker.Location = new System.Drawing.Point(66, 253);
+            this.toHoursTimePicker.Name = "toHoursTimePicker";
+            this.toHoursTimePicker.Size = new System.Drawing.Size(58, 20);
+            this.toHoursTimePicker.TabIndex = 19;
             // 
-            // textBox4
+            // toMinutesTimePicker
             // 
-            this.textBox4.Location = new System.Drawing.Point(158, 253);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(58, 20);
-            this.textBox4.TabIndex = 18;
+            this.toMinutesTimePicker.Location = new System.Drawing.Point(158, 253);
+            this.toMinutesTimePicker.Name = "toMinutesTimePicker";
+            this.toMinutesTimePicker.Size = new System.Drawing.Size(58, 20);
+            this.toMinutesTimePicker.TabIndex = 18;
             // 
             // label7
             // 
@@ -183,8 +183,8 @@
             this.ClientSize = new System.Drawing.Size(272, 409);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.toHoursTimePicker);
+            this.Controls.Add(this.toMinutesTimePicker);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -192,13 +192,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.fromHoursTimePicker);
+            this.Controls.Add(this.fromMinutesTimePicker);
             this.Controls.Add(this.userNameTextBox);
             this.Controls.Add(this.readyButton);
             this.Name = "UserForm";
             this.Text = "Комната пользователя";
-            this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,8 +206,8 @@
         #endregion
         private System.Windows.Forms.Button readyButton;
         private System.Windows.Forms.TextBox userNameTextBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox fromMinutesTimePicker;
+        private System.Windows.Forms.TextBox fromHoursTimePicker;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label label1;
@@ -217,8 +216,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox toHoursTimePicker;
+        private System.Windows.Forms.TextBox toMinutesTimePicker;
         private System.Windows.Forms.Label label7;
     }
 }
