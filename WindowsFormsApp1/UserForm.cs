@@ -30,7 +30,9 @@ namespace WindowsFormsApp1
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-
+            var day = dateTimePicker.Value.Day;
+            var month = dateTimePicker.Value.Month;
+            MessageBox.Show(day + " " + month);
         }
 
         private void label5_Click(object sender, EventArgs e)
