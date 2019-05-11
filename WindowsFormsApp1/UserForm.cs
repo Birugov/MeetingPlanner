@@ -12,46 +12,33 @@ namespace WindowsFormsApp1
 {
     public partial class UserForm : Form
     {
-        public static DateTime CalendarDate;
         public static List<String> TimeArray = new List<string>();
-        public static string userLine = string.Empty;
+        public static string userLine = "";
 
+        #region
         public UserForm()
         {
             InitializeComponent();
-            //var userInfo = new Info();
-
-        }
-
-        private void SendDataBtn(object sender, EventArgs e)
-        {
-
-            //MessageBox.Show("Данные скопированы в буффер обмена");
-
-            var sb = new StringBuilder();
-            foreach (var Time in TimeArray)
-                sb.Append(Time + "\n");
-
-            MessageBox.Show(sb.ToString());
-
-            userLine.Insert(0, userNameTextBox.Text + "_");
-            MessageBox.Show(userLine.ToString());
-
-            this.Close();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            CalendarDate = dateTimePicker.Value;
-            MessageBox.Show(CalendarDate.ToShortDateString());
+
+        }
+        #endregion
+
+        private void SendDataBtn(object sender, EventArgs e)
+        {
+            userLine = userNameTextBox.Text + "_" + userLine;
+            MessageBox.Show(userLine);
+
+            this.Close();
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            userLine += string.Format("{4}/{0}:{1}-{2}:{3}", fromHoursTimePicker.Text, fromMinutesTimePicker.Text,
-                toHoursTimePicker.Text, toMinutesTimePicker.Text, CalendarDate.ToShortDateString());
-            TimeArray.Add(string.Format("{4}/{0}:{1}-{2}:{3}", fromHoursTimePicker.Text, fromMinutesTimePicker.Text,
-                toHoursTimePicker.Text, toMinutesTimePicker.Text, CalendarDate.ToShortDateString()));
+            userLine += string.Format("{4}/{0}:{1}-{2}:{3}||", fromHoursTimePicker.Text, fromMinutesTimePicker.Text,
+                toHoursTimePicker.Text, toMinutesTimePicker.Text, dateTimePicker.Value.ToShortDateString());
 
             fromHoursTimePicker.Text = String.Empty;
             fromMinutesTimePicker.Text = String.Empty;
