@@ -12,8 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class UserForm : Form
     {
-        public static List<String> TimeArray = new List<string>();
-        public static string userLine = "";
+        public static string userLine = string.Empty;
 
         #region
         public UserForm()
@@ -37,13 +36,13 @@ namespace WindowsFormsApp1
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            userLine += string.Format("{4}/{0}:{1}-{2}:{3}||", fromHoursTimePicker.Text, fromMinutesTimePicker.Text,
-                toHoursTimePicker.Text, toMinutesTimePicker.Text, dateTimePicker.Value.ToShortDateString());
+            userLine += string.Format("{4}/{0}:{1}-{2}:{3}||", fromHoursTimePicker.Value, fromMinutesTimePicker.Value,
+                toHoursTimePicker.Value, toHoursTimePicker.Value, dateTimePicker.Value.ToShortDateString());
 
-            fromHoursTimePicker.Text = String.Empty;
-            fromMinutesTimePicker.Text = String.Empty;
-            toHoursTimePicker.Text = String.Empty;
-            toMinutesTimePicker.Text = String.Empty;
+            fromHoursTimePicker.Value = 0;
+            fromMinutesTimePicker.Value = 0;
+            toHoursTimePicker.Value = 0;
+            toMinutesTimePicker.Value = 0;
         }
     }
 }
