@@ -29,8 +29,8 @@ namespace WindowsFormsApp1
         private void SendDataBtn(object sender, EventArgs e)
         {
             userLine = userNameTextBox.Text + "_" + userLine;
-            MessageBox.Show(userLine);
-
+            MessageBox.Show("Данные скопированы в буфер обмена", "Внимание");
+            Clipboard.SetText(userLine);
             this.Close();
         }
 

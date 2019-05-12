@@ -35,7 +35,7 @@
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(126, 98);
+            this.calculateButton.Location = new System.Drawing.Point(127, 55);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(332, 44);
             this.calculateButton.TabIndex = 1;
@@ -46,7 +46,7 @@
             // filePathLabel
             // 
             this.filePathLabel.AutoSize = true;
-            this.filePathLabel.Location = new System.Drawing.Point(12, 38);
+            this.filePathLabel.Location = new System.Drawing.Point(12, 15);
             this.filePathLabel.Name = "filePathLabel";
             this.filePathLabel.Size = new System.Drawing.Size(142, 13);
             this.filePathLabel.TabIndex = 2;
@@ -54,7 +54,7 @@
             // 
             // filePathTextBox
             // 
-            this.filePathTextBox.Location = new System.Drawing.Point(160, 35);
+            this.filePathTextBox.Location = new System.Drawing.Point(160, 12);
             this.filePathTextBox.Name = "filePathTextBox";
             this.filePathTextBox.Size = new System.Drawing.Size(409, 20);
             this.filePathTextBox.TabIndex = 3;
@@ -63,7 +63,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 167);
+            this.ClientSize = new System.Drawing.Size(581, 116);
             this.Controls.Add(this.filePathTextBox);
             this.Controls.Add(this.filePathLabel);
             this.Controls.Add(this.calculateButton);

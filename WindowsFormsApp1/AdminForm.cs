@@ -19,7 +19,8 @@ namespace WindowsFormsApp1
 
         private void CalculateBtn(object sender, EventArgs e)
         {
-            MessageBox.Show("It works");
+            var filePath = filePathTextBox.Text;
+            filePath = "data.txt";
         }
     }
 }
