@@ -46,17 +46,18 @@
             // filePathLabel
             // 
             this.filePathLabel.AutoSize = true;
-            this.filePathLabel.Location = new System.Drawing.Point(12, 15);
+            this.filePathLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.filePathLabel.Location = new System.Drawing.Point(12, 13);
             this.filePathLabel.Name = "filePathLabel";
-            this.filePathLabel.Size = new System.Drawing.Size(142, 13);
+            this.filePathLabel.Size = new System.Drawing.Size(186, 15);
             this.filePathLabel.TabIndex = 2;
             this.filePathLabel.Text = "Путь к текстовому файлу: ";
             // 
             // filePathTextBox
             // 
-            this.filePathTextBox.Location = new System.Drawing.Point(160, 12);
+            this.filePathTextBox.Location = new System.Drawing.Point(204, 12);
             this.filePathTextBox.Name = "filePathTextBox";
-            this.filePathTextBox.Size = new System.Drawing.Size(409, 20);
+            this.filePathTextBox.Size = new System.Drawing.Size(365, 20);
             this.filePathTextBox.TabIndex = 3;
             // 
             // AdminForm

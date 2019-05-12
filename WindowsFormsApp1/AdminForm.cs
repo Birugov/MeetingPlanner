@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -21,6 +22,12 @@ namespace WindowsFormsApp1
         {
             var filePath = filePathTextBox.Text;
             filePath = "data.txt";
+
+            var userLines = File.ReadAllLines(filePath);
+            foreach (var userLine in userLines)
+            {
+                
+            }
         }
     }
 }
