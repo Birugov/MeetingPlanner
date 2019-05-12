@@ -19,12 +19,7 @@ namespace WindowsFormsApp1
 
         private void CalculateBtn(object sender, EventArgs e)
         {
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
+            MessageBox.Show("It works");
         }
     }
 }
