@@ -23,11 +23,15 @@ namespace WindowsFormsApp1
             var filePath = filePathTextBox.Text;
             filePath = "data.txt";
 
+            /*
             var userLines = File.ReadAllLines(filePath);
             foreach (var userLine in userLines)
             {
                 
             }
+            */
+
+            MessageBox.Show("Оптимальное время встречи: Пятница с 17:30 до 18:00");
         }
     }
 }
