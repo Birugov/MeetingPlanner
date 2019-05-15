@@ -50,10 +50,89 @@ namespace WindowsFormsApp1
                         CreateArrayFromTimeInterval(timeInterval.Split('/')[1])));
                 }
 
-                MessageBox.Show(user.ToString());
                 usersList.Add(user);
+                MessageBox.Show(FindIntersections(usersList).ToString());
             }
             
+        }
+
+        private DateTime FindIntersections(List<User> usersList)
+        {
+            var year = new int[365][];
+
+            foreach (var user in usersList)
+            {
+                var i = 0;
+                foreach (var interval in user.TimeIntervals)
+                {
+                    year[interval.Item1.DayOfYear] = new int[24];
+                    for (int j = 0; j < interval.Item2.Length; j++)
+                    {
+                        year[interval.Item1.DayOfYear][interval.Item2[j]]++;
+                    }
+                    i++;
+                }
+            }
+
+            var bestDay = 0;
+            var bestTime = 0;
+            for (var m = 0; m < year.Length; m++)
+            {
+                var max = 0;
+                if (year[m] != null)
+                {
+                    for (var k = 0; k < year[m].Length; k++)
+                    {
+                        if (year[m][k] > max)
+                        {
+                            bestTime = k;
+                            bestDay = m;
+                            max = year[m][k];
+                        }
+
+                    }
+                }
+            }
+
+            return MakeDateTime(bestDay, bestTime);
+        }
+
+        private DateTime MakeDateTime(int Day, int Hour)
+        {
+            var day = 0;
+            var month = 0;
+            int i = 1;
+            while (Day>29)
+            {
+                if (i == 1)
+                    Day -= 31;
+                if (i == 2)
+                    Day -= 28;
+                if (i == 3)
+                    Day -= 31;
+                if (i == 4)
+                    Day -= 30;
+                if (i == 5)
+                    Day -= 31;
+                if (i == 6)
+                    Day -= 30;
+                if (i == 7)
+                    Day -= 31;
+                if (i == 8)
+                    Day -= 31;
+                if (i == 9)
+                    Day -= 30;
+                if (i == 10)
+                    Day -= 31;
+                if (i == 11)
+                    Day -= 30;
+                if (i == 12)
+                    Day -= 31;
+                i++;
+            }
+            day = Day;
+            month = i;
+                return new DateTime(2019, month, day, Hour, 00, 00);
         }
 
         private int[] CreateArrayFromTimeInterval(string timeInterval)
