@@ -51,12 +51,12 @@ namespace WindowsFormsApp1
                 }
 
                 usersList.Add(user);
-                MessageBox.Show(FindIntersections(usersList).ToString());
+                MessageBox.Show(FindIntersections(usersList));
             }
             
         }
 
-        private DateTime FindIntersections(List<User> usersList)
+        private string FindIntersections(List<User> usersList)
         {
             var year = new int[365][];
 
@@ -74,30 +74,34 @@ namespace WindowsFormsApp1
                 }
             }
 
-            var bestDay = 0;
-            var bestTime = 0;
+            int bestDay = 0;
+            var max = 0;
             for (var m = 0; m < year.Length; m++)
             {
-                var max = 0;
                 if (year[m] != null)
                 {
                     for (var k = 0; k < year[m].Length; k++)
                     {
                         if (year[m][k] > max)
                         {
-                            bestTime = k;
-                            bestDay = m;
                             max = year[m][k];
+                            bestDay = m;
                         }
-
                     }
                 }
             }
 
-            return MakeDateTime(bestDay, bestTime);
+            List<int> bestInterval = new List<int>();
+            for (int m = 0; m<year[bestDay].Length; m++ )
+            {
+                if (year[bestDay][m] == max)
+                    bestInterval.Add(m);  
+            }
+
+            return $"{MakeDate(bestDay)} Лучшее время: {bestInterval[0]}:00 - {bestInterval.Last()}:00";
         }
 
-        private DateTime MakeDateTime(int Day, int Hour)
+        private string MakeDate(int Day)
         {
             var day = 0;
             var month = 0;
@@ -132,7 +136,7 @@ namespace WindowsFormsApp1
             }
             day = Day;
             month = i;
-                return new DateTime(2019, month, day, Hour, 00, 00);
+                return $"Лучший день: {month}.{day}";
         }
 
         private int[] CreateArrayFromTimeInterval(string timeInterval)
