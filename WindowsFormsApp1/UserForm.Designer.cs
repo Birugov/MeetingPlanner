@@ -40,13 +40,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.fromHoursTimePicker = new System.Windows.Forms.NumericUpDown();
-            this.fromMinutesTimePicker = new System.Windows.Forms.NumericUpDown();
             this.toHoursTimePicker = new System.Windows.Forms.NumericUpDown();
-            this.toMinutesTimePicker = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fromHoursTimePicker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fromMinutesTimePicker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toHoursTimePicker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toMinutesTimePicker)).BeginInit();
             this.SuspendLayout();
             // 
             // readyButton
@@ -107,7 +105,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(130, 193);
+            this.label4.Location = new System.Drawing.Point(130, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(22, 35);
             this.label4.TabIndex = 15;
@@ -154,60 +152,56 @@
             // 
             // fromHoursTimePicker
             // 
-            this.fromHoursTimePicker.Location = new System.Drawing.Point(66, 203);
+            this.fromHoursTimePicker.Location = new System.Drawing.Point(83, 203);
             this.fromHoursTimePicker.Maximum = new decimal(new int[] {
             23,
             0,
             0,
             0});
             this.fromHoursTimePicker.Name = "fromHoursTimePicker";
-            this.fromHoursTimePicker.Size = new System.Drawing.Size(58, 20);
+            this.fromHoursTimePicker.Size = new System.Drawing.Size(41, 20);
             this.fromHoursTimePicker.TabIndex = 22;
-            // 
-            // fromMinutesTimePicker
-            // 
-            this.fromMinutesTimePicker.Location = new System.Drawing.Point(158, 203);
-            this.fromMinutesTimePicker.Maximum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.fromMinutesTimePicker.Name = "fromMinutesTimePicker";
-            this.fromMinutesTimePicker.Size = new System.Drawing.Size(58, 20);
-            this.fromMinutesTimePicker.TabIndex = 23;
             // 
             // toHoursTimePicker
             // 
-            this.toHoursTimePicker.Location = new System.Drawing.Point(66, 249);
+            this.toHoursTimePicker.Location = new System.Drawing.Point(83, 249);
             this.toHoursTimePicker.Maximum = new decimal(new int[] {
             24,
             0,
             0,
             0});
             this.toHoursTimePicker.Name = "toHoursTimePicker";
-            this.toHoursTimePicker.Size = new System.Drawing.Size(58, 20);
+            this.toHoursTimePicker.Size = new System.Drawing.Size(41, 20);
             this.toHoursTimePicker.TabIndex = 24;
             // 
-            // toMinutesTimePicker
+            // label8
             // 
-            this.toMinutesTimePicker.Location = new System.Drawing.Point(158, 249);
-            this.toMinutesTimePicker.Maximum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.toMinutesTimePicker.Name = "toMinutesTimePicker";
-            this.toMinutesTimePicker.Size = new System.Drawing.Size(58, 20);
-            this.toMinutesTimePicker.TabIndex = 25;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(158, 205);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(24, 18);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "00";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(158, 246);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(24, 18);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "00";
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(272, 409);
-            this.Controls.Add(this.toMinutesTimePicker);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.toHoursTimePicker);
-            this.Controls.Add(this.fromMinutesTimePicker);
             this.Controls.Add(this.fromHoursTimePicker);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
@@ -223,9 +217,7 @@
             this.Name = "UserForm";
             this.Text = "Комната пользователя";
             ((System.ComponentModel.ISupportInitialize)(this.fromHoursTimePicker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fromMinutesTimePicker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toHoursTimePicker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toMinutesTimePicker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,8 +236,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown fromHoursTimePicker;
-        private System.Windows.Forms.NumericUpDown fromMinutesTimePicker;
         private System.Windows.Forms.NumericUpDown toHoursTimePicker;
-        private System.Windows.Forms.NumericUpDown toMinutesTimePicker;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

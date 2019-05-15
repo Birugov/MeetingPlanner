@@ -36,13 +36,11 @@ namespace WindowsFormsApp1
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            userLine += string.Format("{4}/{0}:{1}-{2}:{3}||", fromHoursTimePicker.Value, fromMinutesTimePicker.Value,
-                toHoursTimePicker.Value, toHoursTimePicker.Value, dateTimePicker.Value.ToShortDateString());
+            userLine += string.Format("{4}/{0}:{1}-{2}:{3}|", fromHoursTimePicker.Value, "00",
+                toHoursTimePicker.Value, "00", dateTimePicker.Value.ToShortDateString());
 
             fromHoursTimePicker.Value = 0;
-            fromMinutesTimePicker.Value = 0;
             toHoursTimePicker.Value = 0;
-            toMinutesTimePicker.Value = 0;
         }
     }
 }
